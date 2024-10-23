@@ -120,10 +120,10 @@
 
         //Recibe los datos de los servicios (separados por comas)
         
-        var cantidades = params.has('cantidades') ? params.get('cantidades') : "0";
+        //var cantidades = params.has('cantidades') ? params.get('cantidades') : "0";
         var descripciones = params.has('descripciones') ? params.get('descripciones') : "No hay articulos";
-        var p_units = params.has('precio') ? params.get('precio') : "0.00";
-        var totallinea = params.has('totallinea') ? params.get('totallinea') : "0.00";
+        //var p_units = params.has('precio') ? params.get('precio') : "0.00";
+        //var totallinea = params.has('totallinea') ? params.get('totallinea') : "0.00";
         
         //Formato de 2 decimales
         //propina = parseFloat(propina).toLocaleString('es-ES', { minimumFractionDigits: 0 });
@@ -136,20 +136,21 @@
         //subtotal_desc = parseFloat(subtotal_desc).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         
         //crea una lista de cada columna a partir de las comas.
-        cantidades = cantidades.split(",");
+        //cantidades = cantidades.split(",");
         descripciones = descripciones.split(")"); 
-        p_units = p_units.split(",");
-        totallinea = totallinea.split(",");
+        //p_units = p_units.split(",");
+        //totallinea = totallinea.split(",");
 
         //Crea una lista para mostrar en cada fila de la tabla
         var result = [];
 
-        cantidades.forEach(function(value, id) {
+        //cantidades.forEach(function(value, id) {
+          descripciones.forEach(function(value, id) {
             result[id] = {
-                cantidad: cantidades[id],
+                //cantidad: cantidades[id],
                 descripcion: descripciones[id], // + " " + detalles[id], // Descomenta si deseas concatenar la descripción con el detalle
-                precio_unit: parseFloat(p_units[id]).toLocaleString('es-ES', { minimumFractionDigits: 0 }),
-                totallinea: parseFloat(totallinea[id]).toLocaleString('es-ES', { minimumFractionDigits: 0 }),
+                //precio_unit: parseFloat(p_units[id]).toLocaleString('es-ES', { minimumFractionDigits: 0 }),
+                //totallinea: parseFloat(totallinea[id]).toLocaleString('es-ES', { minimumFractionDigits: 0 }),
             };
         });
     </script>
