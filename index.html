@@ -4,7 +4,7 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=220mm, initial-scale=1.0"> <!-- Cambiar el ancho de la vista para el papel de 58mm -->
-    <title>Presupuesto</title>
+    <title>Nota de Consumo</title>
     <style>
      body {
             font-family: tahoma, Helvetica, sans-serif;
@@ -137,7 +137,7 @@
         
         //crea una lista de cada columna a partir de las comas.
         cantidades = cantidades.split(",");
-        descripciones = descripciones.split(","); 
+        descripciones = descripciones.split(")"); 
         p_units = p_units.split(",");
         totallinea = totallinea.split(",");
 
@@ -475,7 +475,7 @@
         </div>
         
         <div class="label" align="center">
-            <b>PRESUPUESTO:</b>
+            <b>NOTA DE CONSUMO:</b>
             <h1 class="idfactura" id="idfactura_id"></h1>
             <h1 class="nro_boleta" id="nro_boleta_id"></h1>
             <h1 class="nro_mesa" id="nro_mesa_id">---</h1>
